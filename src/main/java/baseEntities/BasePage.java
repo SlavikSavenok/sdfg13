@@ -1,8 +1,7 @@
 package baseEntities;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import servises.WaitsService;
+import services.WaitsService;
 
 public abstract class BasePage {
 
@@ -13,10 +12,4 @@ public abstract class BasePage {
         this.pageDriver = driver;
         this.waitsService = new WaitsService(driver);
     }
-
-    protected void click(By locator) {
-        waitsService.waitAndClick(locator);
-    }
-
-
 }
